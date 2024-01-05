@@ -1,0 +1,29 @@
+Normalizasyon ve standardizasyon, görüntü işleme ve diğer veri işleme alanlarında sıkça kullanılan iki farklı ölçeklendirme yöntemidir.
+
+Normalizasyon:
+
+Amaç: Verileri belirli bir aralığa veya ölçeğe dönüştürmek.
+Tipik olarak [0, 1] aralığına ölçeklendirilir.
+
+Formül: Genellikle (x - min) / (max - min) formülü kullanılır, burada x değer, verinin kendisi, min ve max ise veri setindeki minimum ve maksimum değerlerdir.
+
+Etkileri: Normalizasyon, genellikle yapay sinir ağları (ANN) gibi öğrenme algoritmalarında kullanılır.
+Veri setindeki aykırı değerlere daha hassas olabilir, çünkü tüm veri kümesi belirli bir aralığa sıkıştırılır.
+
+Standardizasyon:
+
+Amaç: Veriyi ortalama değeri 0 ve standart sapması 1 olacak şekilde dönüştürmek.
+Tipik olarak, bir örnek üzerindeki her özellik için ortalama değeri çıkartıp standart sapmaya böler.
+
+Formül: (x - mean) / std formülü kullanılır, burada x değer, verinin kendisi, mean ortalama değeri ve std standart sapmayı temsil eder.
+Etkileri:
+
+Standartizasyon, genellikle çeşitli öğrenme algoritmalarında kullanılır, özellikle de çoklu değişken içeren algoritmalar için.
+Aykırı değerlere karşı daha dirençlidir, çünkü standart sapma hesaplamalarında kullanılır.
+
+Hangi Yöntemi Kullanmalı?
+
+Eğer verileriniz belirli bir sınırlı aralıkta ise ve aykırı değerlerden etkilenmek istemiyorsanız ve özellikle görüntü piksel değerlerini [0, 1] aralığına getirmek istiyorsak NORMALİZASYON kullanırız.
+
+Eğer verilerinizin dağılımı normal dağılmaya daha yakınsa, çoklu özellik içeren algoritmalar kullanıyorsak ve aykırı değerlere karşı daha dirençli bir ölçekleme istiyor isek STANDARTİZASYON tercih edilebilir.
+Özellikle çok değişkenli veri setlerinde kullanılarak farklı özelliklerin birbirleriyle karşılaştırılabilir hale getirilmesi amaçlanıyorsa  kullanılır.
